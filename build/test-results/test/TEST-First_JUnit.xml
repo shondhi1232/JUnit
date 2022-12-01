@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="First_JUnit" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-01T13:08:11" hostname="DESKTOP-6G0HKUV" time="11.215">
+  <properties/>
+  <testcase name="checkImgExist" classname="First_JUnit" time="11.215"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+1669900092285	geckodriver	INFO	Listening on 127.0.0.1:44483
+1669900093281	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "34865" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://127.0.0.1:34865/,http://localhost:34865/,http://[::1]:34865/" "-no-remote" "-profile" "C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileaXG582"
+1669900093756	Marionette	INFO	Marionette enabled
+1669900093763	Marionette	INFO	Listening on port 61681
+Read port: 61681
+WebDriver BiDi listening on ws://127.0.0.1:34865
+1669900093908	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileaXG582\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:34865/devtools/browser/ca9ba4a4-0ba4-4097-95a0-6c9f8bd9a5be
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+]]></system-err>
+</testsuite>
