@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -56,5 +57,21 @@ public class Second_demo {
         action.doubleClick(buttons.get(1)).perform();
         action.contextClick(buttons.get(2)).perform();
         action.click(buttons.get(3)).perform();
+
+        //button response message find and assert using tag p
+        List<WebElement> messages =  driver.findElements(By.tagName("p"));
+        String message1Actual = messages.get(0).getText();
+        String message1Expected = "You have done a double click";
+        Assert.assertTrue(message1Expected.contains(message1Actual));
+
+
+        String message2Actual = messages.get(1).getText();
+        String message2Expected = "You have done a right click";
+        Assert.assertTrue(message2Expected.contains(message2Actual));
+
+
+        String message3Actual = messages.get(2).getText();
+        String message3Expected = "You have done a dynamic click";
+        Assert.assertTrue(message3Expected.contains(message3Actual));
     }
 }
