@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Second_demo" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-02T23:01:01" hostname="DESKTOP-6G0HKUV" time="10.511">
+<testsuite name="Second_demo" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-02T23:13:14" hostname="DESKTOP-6G0HKUV" time="10.627">
   <properties/>
-  <testcase name="buttonClick" classname="Second_demo" time="10.511"/>
+  <testcase name="ButtonClick" classname="Second_demo" time="10.627"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1670022062211	geckodriver	INFO	Listening on 127.0.0.1:22847
-1670022063211	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headed" "--remote-debugging-port" "44109" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://127.0.0.1:44109/,http://localhost:44109/,http://[::1]:44109/" "-no-remote" "-profile" "C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofiletmmgKS"
-1670022063645	Marionette	INFO	Marionette enabled
-1670022063652	Marionette	INFO	Listening on port 57046
-WebDriver BiDi listening on ws://127.0.0.1:44109
-Read port: 57046
-1670022063946	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofiletmmgKS\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:44109/devtools/browser/8912192d-1e26-442e-9805-26fdb7fb2f87
+1670022795100	geckodriver	INFO	Listening on 127.0.0.1:17871
+1670022796128	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headed" "--remote-debugging-port" "16716" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://127.0.0.1:16716/,http://localhost:16716/,http://[::1]:16716/" "-no-remote" "-profile" "C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileb3Rg1B"
+1670022796582	Marionette	INFO	Marionette enabled
+1670022796590	Marionette	INFO	Listening on port 55501
+Read port: 55501
+WebDriver BiDi listening on ws://127.0.0.1:16716
+1670022796764	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileb3Rg1B\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:16716/devtools/browser/df257b71-2a96-4bc1-900d-de985dc7319e
 JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
-JavaScript warning: https://pagead2.googlesyndication.com/bg/HXK1UBO5dJ_nYlUyX89SMP4zFPzfcfFy3F4kBoREzco.js line 2 > eval line 6510 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/HXK1UBO5dJ_nYlUyX89SMP4zFPzfcfFy3F4kBoREzco.js line 2 > eval line 1768 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://pagead2.googlesyndication.com/bg/HXK1UBO5dJ_nYlUyX89SMP4zFPzfcfFy3F4kBoREzco.js line 2 > eval line 30 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 ]]></system-err>
 </testsuite>

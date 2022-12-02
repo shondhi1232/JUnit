@@ -41,10 +41,20 @@ public class Second_demo {
     }
 
     @Test
-    public void buttonClick(){
+    public void DoubleButtonClick(){
         driver.get("https://demoqa.com/buttons");
         Actions action = new Actions(driver);
         WebElement btn= driver.findElement(By.id("doubleClickBtn"));
         action.doubleClick(btn).perform();
+    }
+
+    @Test
+    public void ButtonClick(){
+        driver.get("https://demoqa.com/buttons");
+        Actions action = new Actions(driver);
+        List<WebElement> buttons =  driver.findElements(By.cssSelector("[type = button]"));
+        action.doubleClick(buttons.get(1)).perform();
+        action.contextClick(buttons.get(2)).perform();
+        action.click(buttons.get(3)).perform();
     }
 }
