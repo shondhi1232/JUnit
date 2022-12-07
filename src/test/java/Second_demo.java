@@ -2,12 +2,14 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 
+import java.security.Key;
 import java.time.Duration;
 import java.util.List;
 
@@ -71,7 +73,61 @@ public class Second_demo {
 
 
         String message3Actual = messages.get(2).getText();
-        String message3Expected = "You have done a dynamic click";
-        Assert.assertTrue(message3Expected.contains(message3Actual));
+        String message3Expected = "dynamic click";
+        Assert.assertTrue(message3Actual.contains(message3Expected));
+    }
+
+    @Test
+    public void handleAlart() throws InterruptedException {
+        driver.get("https://demoqa.com/alerts");
+        driver.findElement(By.id("alertButton")).click();
+        //Thread.sleep(200);
+        driver.switchTo().alert().accept();
+
+        //driver.findElement(By.id("button")).click();
+        //Thread.sleep(600);
+        //driver.switchTo().alert().accept();
+
+        driver.findElement(By.id("confirmButton")).click();
+        driver.switchTo().alert().dismiss();
+        String actualMsg= driver.findElement(By.id("confirmResult")).getText();
+        String expectedMsg="Cancel";
+        Assert.assertTrue(actualMsg.contains(expectedMsg));
+
+        driver.findElement(By.id("promtButton")).click();
+        driver.switchTo().alert().sendKeys("shondhi");
+        driver.switchTo().alert().accept();
+
+    }
+    @Test
+    public void selectDate(){
+        driver.get("https://demoqa.com/date-picker");
+        driver.findElement(By.id("datePickerMonthYearInput")).clear();
+        driver.findElement(By.id("datePickerMonthYearInput")).sendKeys("12/07/22");
+
+        //calendar will disappear
+       // driver.findElement(By.tagName("body")).click();
+
+        //If body tag doesn't work than we can use this command
+        driver.findElement(By.id("datePickerMonthYearInput")).sendKeys(Keys.ENTER);
+    }
+    @Test
+    public void selectDateByKeyboard(){
+        driver.get("https://demoqa.com/date-picker");
+        Actions action = new Actions(driver);
+        WebElement datePicker = driver.findElement(By.id("datePickerMonthYearInput"));
+
+        //always don't work
+        //action.moveToElement(datePicker);
+       // action.doubleClick(datePicker).click().keyDown(Keys.BACK_SPACE).keyUp(Keys.BACK_SPACE).perform();
+
+        //another way to remove the text in the datePicker
+        //easier way before one
+        //this command work as keyboard   control+a
+        datePicker.sendKeys(Keys.CONTROL+"a");
+        datePicker.sendKeys(Keys.BACK_SPACE);
+    }
+    public void selectDropDown(){
+        driver.get("");
     }
 }
