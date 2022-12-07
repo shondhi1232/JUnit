@@ -1,4 +1,3 @@
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -45,7 +44,7 @@ public class MouseHover {
         action.moveToElement(aboutUsElem.get(2)).perform();
     }
      */
-    
+
     //only click on the about us
     @Test
     public void ClickMenu(){
