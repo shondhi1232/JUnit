@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import java.security.Key;
 import java.time.Duration;
@@ -127,7 +128,26 @@ public class Second_demo {
         datePicker.sendKeys(Keys.CONTROL+"a");
         datePicker.sendKeys(Keys.BACK_SPACE);
     }
+    @Test
     public void selectDropDown(){
-        driver.get("");
+        driver.get("https://demoqa.com/select-menu");
+        WebElement dropdown = driver.findElement(By.id("oldSelectMenu"));
+        Select option = new Select(dropdown);
+        //option.selectByIndex(1);
+        //option.selectByValue("2");
+        option.selectByVisibleText("Yellow");
+    }
+
+    @Test
+    public void multipleDropDown(){
+        driver.get("https://demoqa.com/select-menu");
+        WebElement dropdown = driver.findElement(By.name("cars"));
+        Select option = new Select(dropdown);
+        if (option.isMultiple()) {
+            //option.selectByIndex(1);
+            //option.selectByValue("2");
+            option.selectByVisibleText("Volvo");
+                option.selectByVisibleText("Audi");
+        }
     }
 }
