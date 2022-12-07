@@ -144,8 +144,6 @@ public class Second_demo {
         WebElement dropdown = driver.findElement(By.name("cars"));
         Select option = new Select(dropdown);
         if (option.isMultiple()) {
-            //option.selectByIndex(1);
-            //option.selectByValue("2");
             option.selectByVisibleText("Volvo");
                 option.selectByVisibleText("Audi");
         }

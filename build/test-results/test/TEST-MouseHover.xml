@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MouseHover" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-07T17:02:42" hostname="DESKTOP-6G0HKUV" time="18.34">
+  <properties/>
+  <testcase name="hoverMenu" classname="MouseHover" time="18.34"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+1670432563728	geckodriver	INFO	Listening on 127.0.0.1:1793
+1670432564715	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headed" "--remote-debugging-port" "39757" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://127.0.0.1:39757/,http://localhost:39757/,http://[::1]:39757/" "-no-remote" "-profile" "C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileYmmPwc"
+1670432565145	Marionette	INFO	Marionette enabled
+1670432565152	Marionette	INFO	Listening on port 53844
+Read port: 53844
+WebDriver BiDi listening on ws://127.0.0.1:39757
+1670432565296	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileYmmPwc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:39757/devtools/browser/dd2be575-a656-4bde-be0d-12dd094e3833
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: https://green.edu.bd/wp-content/plugins/tabs-responsive/assets/js/bootstrap.js?ver=6.0, line 15: Error: Bootstrap's JavaScript requires jQuery version 1.9.1 or higher, but lower than version 3
+JavaScript error: https://green.edu.bd/wp-content/themes/mastergreen/assets/js/master-green.js?ver=1.8.2, line 155: TypeError: $ is not a function
+JavaScript error: https://green.edu.bd/wp-content/plugins/free-mubjib-borsho/mujib.js?ver=1.0.0, line 173: TypeError: c is null
+]]></system-err>
+</testsuite>
