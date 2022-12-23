@@ -1,23 +1,31 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 
 public class MouseHover {
     WebDriver driver;
     @Before
     public  void setup(){
-        System.setProperty("webdriver.gecko.driver","./src/test/resources/geckodriver.exe");
-        FirefoxOptions ops = new FirefoxOptions();
+
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions ops = new ChromeOptions();
         ops.addArguments("--headed");
-        driver = new FirefoxDriver(ops);
+        driver = new ChromeDriver(ops);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
@@ -52,4 +60,6 @@ public class MouseHover {
         List<WebElement> aboutUsElem = driver.findElements(By.className("dropdown-toggle"));
         aboutUsElem.get(0).click();
     }
+
+
 }

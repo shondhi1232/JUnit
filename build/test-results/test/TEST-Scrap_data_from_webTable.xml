@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scrap_data_from_webTable" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-23T23:22:43" hostname="DESKTOP-6G0HKUV" time="10.884">
+  <properties/>
+  <testcase name="scrap_data" classname="Scrap_data_from_webTable" time="10.884"/>
+  <system-out><![CDATA[num[1]Cierra
+num[2]Vega
+num[3]39
+num[4]cierra@example.com
+num[5]10000
+num[6]Insurance
+num[7]
+num[8]Alden
+num[9]Cantrell
+num[10]45
+num[11]alden@example.com
+num[12]12000
+num[13]Compliance
+num[14]
+num[15]Kierra
+num[16]Gentry
+num[17]29
+num[18]kierra@example.com
+num[19]2000
+num[20]Legal
+num[21]
+num[22] 
+num[23] 
+num[24] 
+num[25] 
+num[26] 
+num[27] 
+num[28] 
+num[29] 
+num[30] 
+num[31] 
+num[32] 
+num[33] 
+num[34] 
+num[35] 
+num[36] 
+num[37] 
+num[38] 
+num[39] 
+num[40] 
+num[41] 
+num[42] 
+num[43] 
+num[44] 
+num[45] 
+num[46] 
+num[47] 
+num[48] 
+num[49] 
+num[50] 
+num[51] 
+num[52] 
+num[53] 
+num[54] 
+num[55] 
+num[56] 
+num[57] 
+num[58] 
+num[59] 
+num[60] 
+num[61] 
+num[62] 
+num[63] 
+num[64] 
+num[65] 
+num[66] 
+num[67] 
+num[68] 
+num[69] 
+num[70] 
+]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+1671837764637	geckodriver	INFO	Listening on 127.0.0.1:45206
+1671837765602	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headed" "--remote-debugging-port" "42383" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://127.0.0.1:42383/,http://localhost:42383/,http://[::1]:42383/" "-no-remote" "-profile" "C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofile8gMXyn"
+1671837766010	Marionette	INFO	Marionette enabled
+1671837766016	Marionette	INFO	Listening on port 49654
+Read port: 49654
+WebDriver BiDi listening on ws://127.0.0.1:42383
+1671837766156	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofile8gMXyn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:42383/devtools/browser/d4a9966b-1ec1-485d-9ca5-8411fd141cb2
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FAILURE: Should pass a non-null uri
+1671837772554	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1671837772719	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/3WpNOUgrN-_pxVw2NAHVNtofer_w6aLb3ZHXGHAM44Y.js line 2 > eval line 4986 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+]]></system-err>
+</testsuite>
