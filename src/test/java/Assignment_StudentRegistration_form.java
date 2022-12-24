@@ -25,7 +25,7 @@ public class Assignment_StudentRegistration_form {
     }
 
     @Test
-    public void submitForm() throws InterruptedException {
+    public void _1submitForm() throws InterruptedException {
         driver.get("https://demoqa.com/automation-practice-form");
         driver.findElement(By.id("firstName")).sendKeys("shondi");
         driver.findElement(By.id("lastName")).sendKeys("Akter");
@@ -33,18 +33,18 @@ public class Assignment_StudentRegistration_form {
 
     }
     @Test
-    public void select_RadioButton(){
+    public void _2select_RadioButton(){
         driver.get("https://demoqa.com/automation-practice-form");
         driver.findElement(By.xpath("//label[text()='Female']")).click();
 
     }
     @Test
-    public void enterPhoneNumber(){
+    public void _3enterPhoneNumber(){
         driver.get("https://demoqa.com/automation-practice-form");
         driver.findElement(By.id("userNumber")).sendKeys("01335932998");
     }
     @Test
-    public void selectDateOfBirth(){
+    public void _4selectDateOfBirth(){
         driver.get("https://demoqa.com/automation-practice-form");
         driver.findElement(By.id("dateOfBirthInput")).click();
         WebElement dropdown1 = driver.findElement(By.className("react-datepicker__month-select"));
@@ -57,12 +57,12 @@ public class Assignment_StudentRegistration_form {
         driver.findElement(By.xpath("//div[text()='1']")).click();
     }
     @Test
-    public void subjectWrite(){
+    public void _5subjectWrite(){
         driver.get("https://demoqa.com/automation-practice-form");
         driver.findElement(By.id("subjectsInput")).sendKeys("JavasScript");
     }
     @Test
-    public void selectCheckBox(){
+    public void _6selectCheckBox(){
         driver.get("https://demoqa.com/automation-practice-form");
 
 
@@ -76,28 +76,33 @@ public class Assignment_StudentRegistration_form {
         driver.findElement(By.cssSelector("label[for='hobbies-checkbox-3']")).click();
     }
     @Test
-    public void uploadImage(){
+    public void _7uploadImage(){
 
         driver.get("https://demoqa.com/automation-practice-form");
         driver.findElement(By.id("uploadPicture")).sendKeys("C:\\baby.jpg");
     }
     @Test
-    public void writeCurrentAddress(){
+    public void _8writeCurrentAddress(){
 
         driver.get("https://demoqa.com/automation-practice-form");
         driver.findElement(By.id("currentAddress")).sendKeys("Dhaka,Bangladesh");
     }
-
-    public void selectSateAndCity(){
+    public void selectSate(){
         driver.get("https://demoqa.com/automation-practice-form");
             //not work
         driver.findElement(By.xpath("//div[text()='Rajasthan']")).click();
 
     }
-    @Test
-    public void submitButton(){
+    public void selectCity(){
         driver.get("https://demoqa.com/automation-practice-form");
+        //not work select city option
+        driver.findElement(By.xpath("//div[text()='agra']")).click();
 
+    }
+   // @Test
+    public void _9submitButton(){
+        driver.get("https://demoqa.com/automation-practice-form");
+            // not work submit button
         driver.findElement(By.id("submit")).click();
     }
 
