@@ -1,2 +1,4 @@
 rootProject.name = 'DemoQA'
+include 'src:test:sub_cases'
+findProject(':src:test:sub_cases')?.name = 'sub_cases'
 
