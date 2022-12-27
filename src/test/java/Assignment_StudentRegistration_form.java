@@ -1,15 +1,17 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
+import java.util.List;
+
+import static org.openqa.selenium.Keys.*;
+import static org.openqa.selenium.Keys.ARROW_DOWN;
 
 public class Assignment_StudentRegistration_form {
 
@@ -27,25 +29,15 @@ public class Assignment_StudentRegistration_form {
     @Test
     public void _1submitForm() throws InterruptedException {
         driver.get("https://demoqa.com/automation-practice-form");
-        driver.findElement(By.id("firstName")).sendKeys("shondi");
-        driver.findElement(By.id("lastName")).sendKeys("Akter");
-        driver.findElement(By.id("userEmail")).sendKeys("shondi@test.com");
+        driver.findElement(By.id("firstName")).sendKeys("sand");
+        driver.findElement(By.id("lastName")).sendKeys("milo");
+        driver.findElement(By.id("userEmail")).sendKeys("sand@test.com");
 
-    }
-    @Test
-    public void _2select_RadioButton(){
-        driver.get("https://demoqa.com/automation-practice-form");
+        //select gender from radio button
         driver.findElement(By.xpath("//label[text()='Female']")).click();
+        driver.findElement(By.id("userNumber")).sendKeys("01235932998");
 
-    }
-    @Test
-    public void _3enterPhoneNumber(){
-        driver.get("https://demoqa.com/automation-practice-form");
-        driver.findElement(By.id("userNumber")).sendKeys("01335932998");
-    }
-    @Test
-    public void _4selectDateOfBirth(){
-        driver.get("https://demoqa.com/automation-practice-form");
+        //select Date of birth from calendar
         driver.findElement(By.id("dateOfBirthInput")).click();
         WebElement dropdown1 = driver.findElement(By.className("react-datepicker__month-select"));
         Select option = new Select(dropdown1);
@@ -55,55 +47,109 @@ public class Assignment_StudentRegistration_form {
         Select option2 = new Select(dropdown2);
         option2.selectByVisibleText("2000");
         driver.findElement(By.xpath("//div[text()='1']")).click();
-    }
-    @Test
-    public void _5subjectWrite(){
-        driver.get("https://demoqa.com/automation-practice-form");
+
         driver.findElement(By.id("subjectsInput")).sendKeys("JavasScript");
-    }
-    @Test
-    public void _6selectCheckBox(){
-        driver.get("https://demoqa.com/automation-practice-form");
 
 
+        //Selecting the hobbies from checkbox using XPath
         //driver.findElement(By.id("hobbies-checkbox-1")).click();
-
-        //Selecting the first checkbox using XPath
         driver.findElement(By.xpath("//label[text()='Sports']")).click();
         driver.findElement(By.xpath("//label[text()='Reading']")).click();
 
-        //Selecting the last check box
+        //Selecting the last check-box
         driver.findElement(By.cssSelector("label[for='hobbies-checkbox-3']")).click();
-    }
-    @Test
-    public void _7uploadImage(){
 
-        driver.get("https://demoqa.com/automation-practice-form");
+        //upload image
         driver.findElement(By.id("uploadPicture")).sendKeys("C:\\baby.jpg");
-    }
-    @Test
-    public void _8writeCurrentAddress(){
-
-        driver.get("https://demoqa.com/automation-practice-form");
+        //write current address in the text box
         driver.findElement(By.id("currentAddress")).sendKeys("Dhaka,Bangladesh");
-    }
-    public void selectSate(){
-        driver.get("https://demoqa.com/automation-practice-form");
-            //not work
-        driver.findElement(By.xpath("//div[text()='Rajasthan']")).click();
 
-    }
-    public void selectCity(){
-        driver.get("https://demoqa.com/automation-practice-form");
-        //not work select city option
-        driver.findElement(By.xpath("//div[text()='agra']")).click();
+        Thread.sleep(3000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //javaScript scroll down code, and it is executing by javascriptExecutor and it is done through driver.
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 
-    }
-   // @Test
-    public void _9submitButton(){
-        driver.get("https://demoqa.com/automation-practice-form");
-            // not work submit button
-        driver.findElement(By.id("submit")).click();
+        //select sate
+        Actions action = new Actions(driver);
+        List<WebElement> sateBtn =driver.findElements(By.className("css-yk16xz-control"));
+        WebElement selectBtn = sateBtn.get(1);
+        action.click(selectBtn).perform();
+        Thread.sleep(2000);
+        action.keyDown(selectBtn,DOWN).click().perform();
+        action.keyDown(selectBtn,ENTER).perform();
+
+        //select city
+        Actions actionCT = new Actions(driver);
+        WebElement city = driver.findElement(By.id("city"));
+        actionCT.click(city).perform();
+        Thread.sleep(4000);
+        actionCT.keyDown(city,DOWN).click().perform();
+        actionCT.keyDown(city,ENTER).perform();
+
+        //submit button click and assertion
+        WebElement submit =driver.findElement(By.cssSelector("[type=submit]"));
+        action.click(submit).perform();
+        WebElement txtData = driver.findElement(By.id("example-modal-sizes-title-lg"));
+        Thread.sleep(2000);
+        String actualData = txtData.getText();
+        String expectedData = "Thanks for submitting";
+        Assert.assertTrue(actualData.contains(expectedData));
+//------------------------------------------------------------------------
+
+        //UserName Assertion
+        List<WebElement> td1 = driver.findElements(By.tagName("td"));
+        String nameActual = td1.get(1).getText();
+        String nameExpected = "sand";
+        Assert.assertTrue(nameActual.contains(nameExpected));
+
+        //student email assertion
+        List<WebElement> td2 = driver.findElements(By.tagName("td"));
+        String mailActual = td2.get(3).getText();
+        String mailExpected = "sand@test.com";
+        Assert.assertTrue(mailActual.contains(mailExpected));
+
+        //Gender assertion
+        List<WebElement> td3 = driver.findElements(By.tagName("td"));
+        String genderActual = td3.get(5).getText();
+        String genderExpected = "sand@test.com";
+        Assert.assertTrue(genderActual.contains(genderExpected));
+
+        //mobile
+        List<WebElement> td4 = driver.findElements(By.tagName("td"));
+        String mobileActual = td4.get(7).getText();
+        String mobileExpected = "01235932998";
+        Assert.assertTrue(mobileActual.contains(mobileExpected));
+
+        //Date of birth
+        List<WebElement> td5 = driver.findElements(By.tagName("td"));
+        String DBActual = td5.get(9).getText();
+        String DBExpected = "01 January,2000";
+        Assert.assertTrue(DBActual.contains(DBExpected));
+
+        //Subject assertion
+        List<WebElement> td6 = driver.findElements(By.tagName("td"));
+        String subjectActual = td6.get(11).getText();
+        String subjectExpected = "JavasScript";
+        Assert.assertTrue(subjectActual.contains(subjectExpected));
+
+        //hobbies assertion
+        List<WebElement> td7 = driver.findElements(By.tagName("td"));
+        String hobbyActual = td7.get(13).getText();
+        String hobbyExpected = "Sports";
+        Assert.assertTrue(hobbyActual.contains(hobbyExpected));
+
+        //Address assertion
+        List<WebElement> td8 = driver.findElements(By.tagName("td"));
+        String addressActual = td8.get(17).getText();
+        String addressExpected = "Dhaka";
+        Assert.assertTrue(addressActual.contains(addressExpected));
+
+        //State and City
+        List<WebElement> td9 = driver.findElements(By.tagName("td"));
+        String scActual = td9.get(19).getText();
+        String scExpected = "NCR";
+        Assert.assertTrue(scActual.contains(scExpected));
+
     }
 
 }
