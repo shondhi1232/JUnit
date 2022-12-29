@@ -1,12 +1,7 @@
-
-src\test\java\Components
-src\test\resources
-build.gradle
-gradlew
-gradlew.bat
-settings.gradle
-src\main
 gradle
 build
 .idea
 .gradle
+/src/test/resources/screenShot
+/src/test/resources/chromedriver.exe
+/src/test/resources/geckodriver.exe
