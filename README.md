@@ -9,7 +9,6 @@
  - Setup Environment veriable 
  ### Dependencies setup:
  - https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
- ```implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'```
  - https://mvnrepository.com/artifact/junit/junit
  - https://mvnrepository.com/artifact/commons-io/commons-io
  - https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
