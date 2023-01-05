@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">30.947s</div>
+<div class="counter">24.615s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,32 +73,14 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="_1submitForm"></a>
-<h3 class="failures">_1submitForm</h3>
+<a name="submitForm"></a>
+<h3 class="failures">submitForm</h3>
 <span class="code">
-<pre>org.openqa.selenium.WebDriverException: TypeError: browsingContext.currentWindowGlobal is null
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [9e6a8a5e-267c-448c-9191-34b628efc85a, findElement {using=id, value=example-modal-sizes-title-lg}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 108.0.1, moz:accessibilityChecks: false, moz:buildID: 20221215175817, moz:debuggerAddress: 127.0.0.1:22563, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27208, moz:profile: C:\Users\MDZAHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:22563/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9e6a8a5e-267c-448c-9191-34b628efc85a
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at Assignment_StudentRegistration_form._1submitForm(Assignment_StudentRegistration_form.java:89)
+<pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at Assignment_StudentRegistration_form.submitForm(Assignment_StudentRegistration_form.java:120)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -155,8 +137,8 @@ Session ID: 9e6a8a5e-267c-448c-9191-34b628efc85a
 </tr>
 </thead>
 <tr>
-<td class="failures">_1submitForm</td>
-<td class="failures">30.947s</td>
+<td class="failures">submitForm</td>
+<td class="failures">24.615s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -167,28 +149,19 @@ Session ID: 9e6a8a5e-267c-448c-9191-34b628efc85a
 <pre>SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
-1672176422491	geckodriver	INFO	Listening on 127.0.0.1:18654
-1672176423492	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;--marionette&quot; &quot;--headed&quot; &quot;--remote-debugging-port&quot; &quot;22563&quot; &quot;--remote-allow-hosts&quot; &quot;localhost&quot; &quot;--remote-allow-origins&quot; &quot;http://127.0.0.1:22563/,http://localhost:22563/,http://[::1]:22563/&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileCWQg7H&quot;
-1672176423903	Marionette	INFO	Marionette enabled
-1672176423910	Marionette	INFO	Listening on port 61454
-Read port: 61454
-WebDriver BiDi listening on ws://127.0.0.1:22563
-1672176424050	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new NotFoundError(&quot;Could not open the file at C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileCWQg7H\\search.json.mozlz4&quot;, (void 0)))
-DevTools listening on ws://127.0.0.1:22563/devtools/browser/d7d770ac-579d-4cf2-a28d-f8b6f24cedeb
+1672893687282	geckodriver	INFO	Listening on 127.0.0.1:30850
+1672893688247	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;--marionette&quot; &quot;--headed&quot; &quot;--remote-debugging-port&quot; &quot;8957&quot; &quot;--remote-allow-hosts&quot; &quot;localhost&quot; &quot;--remote-allow-origins&quot; &quot;http://127.0.0.1:8957/,http://localhost:8957/,http://[::1]:8957/&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileXl307m&quot;
+1672893688663	Marionette	INFO	Marionette enabled
+1672893688669	Marionette	INFO	Listening on port 55432
+Read port: 55432
+WebDriver BiDi listening on ws://127.0.0.1:8957
+1672893688809	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new NotFoundError(&quot;Could not open the file at C:\\Users\\MDZAHI~1\\AppData\\Local\\Temp\\rust_mozprofileXl307m\\search.json.mozlz4&quot;, (void 0)))
+DevTools listening on ws://127.0.0.1:8957/devtools/browser/7611757b-758d-4392-b5c4-2a175aad256c
 JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FAILURE: Should pass a non-null uri
-1672176430448	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JwRg8GnJRbSbwgtubA3x1Twn6jgCPCxSQn9TsX0K1wE.js line 2 &gt; eval line 1230 &gt; eval line 1 &gt; eval line 1 &gt; eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript error: https://cdn.ad.plus/player/adplus.js, line 403: TypeError: l(...).setup is not a function
-JavaScript warning: https://pagead2.googlesyndication.com/bg/3WpNOUgrN-_pxVw2NAHVNtofer_w6aLb3ZHXGHAM44Y.js line 2 &gt; eval line 6564 &gt; eval line 1 &gt; eval line 1 &gt; eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript error: , line 0: uncaught exception: 7
-JavaScript warning: https://pagead2.googlesyndication.com/bg/3WpNOUgrN-_pxVw2NAHVNtofer_w6aLb3ZHXGHAM44Y.js line 2 &gt; eval line 937 &gt; eval line 1 &gt; eval line 1 &gt; eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript warning: https://assets.adobedtm.com/launch-EN60c495b1095d4bcdac2071da23e460e7.min.js, line 9: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-JavaScript error: https://bd.pureitwater.com/devices/pureit-mineral-ultima-ro-uv-mf?gclid=EAIaIQobChMIr7jZ0N6a_AIVVYjmCh1geQAuEAEYASABEgIq5_D_BwE line 8 &gt; injectedScript, line 417: TypeError: dataLayerN.gaa is undefined
-JavaScript error: https://bd.pureitwater.com/devices/pureit-mineral-ultima-ro-uv-mf?gclid=EAIaIQobChMIr7jZ0N6a_AIVVYjmCh1geQAuEAEYASABEgIq5_D_BwE, line 1650: ReferenceError: ctConstants is not defined
-1672176452529	Marionette	INFO	Stopped listening on port 61454
-Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
-getMarionetteCommandsActorProxy/get/&lt;@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:325:29
-
+console.warn: LoginRecipes: &quot;Falling back to a synchronous message for: https://demoqa.com.&quot;
 </pre>
 </span>
 </div>
@@ -200,7 +173,7 @@ getMarionetteCommandsActorProxy/get/&lt;@chrome://remote/content/marionette/acto
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at Dec 28, 2022 3:27:33 AM</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at Jan 5, 2023 10:41:51 AM</p>
 </div>
 </div>
 </body>

@@ -25,16 +25,17 @@ public class Assignment_StudentRegistration_form {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
-
     @Test
-    public void _1submitForm() throws InterruptedException {
+    public void submitForm() throws InterruptedException {
         driver.get("https://demoqa.com/automation-practice-form");
         driver.findElement(By.id("firstName")).sendKeys("sand");
         driver.findElement(By.id("lastName")).sendKeys("milo");
+
         driver.findElement(By.id("userEmail")).sendKeys("sand@test.com");
 
         //select gender from radio button
         driver.findElement(By.xpath("//label[text()='Female']")).click();
+
         driver.findElement(By.id("userNumber")).sendKeys("01235932998");
 
         //select Date of birth from calendar
@@ -48,8 +49,8 @@ public class Assignment_StudentRegistration_form {
         option2.selectByVisibleText("2000");
         driver.findElement(By.xpath("//div[text()='1']")).click();
 
+        //write subject
         driver.findElement(By.id("subjectsInput")).sendKeys("JavasScript");
-
 
         //Selecting the hobbies from checkbox using XPath
         //driver.findElement(By.id("hobbies-checkbox-1")).click();
@@ -61,6 +62,7 @@ public class Assignment_StudentRegistration_form {
 
         //upload image
         driver.findElement(By.id("uploadPicture")).sendKeys("C:\\baby.jpg");
+
         //write current address in the text box
         driver.findElement(By.id("currentAddress")).sendKeys("Dhaka,Bangladesh");
 
@@ -86,15 +88,18 @@ public class Assignment_StudentRegistration_form {
         actionCT.keyDown(city,DOWN).click().perform();
         actionCT.keyDown(city,ENTER).perform();
 
-        //submit button click and assertion
+        //submit button click
+        Actions action3 = new Actions(driver);
         WebElement submit =driver.findElement(By.cssSelector("[type=submit]"));
-        action.click(submit).perform();
+        action3.click(submit).perform();
+
+//----------------------------------------------------------------------------
+        //submit Assertion
         WebElement txtData = driver.findElement(By.id("example-modal-sizes-title-lg"));
         Thread.sleep(2000);
         String actualData = txtData.getText();
         String expectedData = "Thanks for submitting";
         Assert.assertTrue(actualData.contains(expectedData));
-//------------------------------------------------------------------------
 
         //UserName Assertion
         List<WebElement> td1 = driver.findElements(By.tagName("td"));
