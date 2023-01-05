@@ -8,7 +8,7 @@
 ## Pre-requisit:
  - Setup Environment veriable 
  ### Dependencies setup:
-    - // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    -// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
 ## Test Reports:
  - In this report, showing failed because subject assertion is failed and its only reason is ToolsQA site error.
