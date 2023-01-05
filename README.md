@@ -14,4 +14,4 @@
  - https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
 ## Test Reports:
  - In this report, showing failed because subject assertion is failed and its only reason is ToolsQA site error.
-![junitTestReport](https://user-images.githubusercontent.com/52061402/210704366-8021cdde-b1d2-4de4-849b-91220d566ee0.JPG)
+![junitTestReport](https://user-images.githubusercontent.com/52061402/210709647-afea1788-ea80-4d63-bf20-ea7781641d4d.JPG)
