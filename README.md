@@ -1,7 +1,7 @@
 # Unit Test on toolsQA
 ## Technology and Tools
   - IntelliJ IDEA Community 
-### tools
+### Tools
    - Selenium
 ### Framworks
    - JUnit
